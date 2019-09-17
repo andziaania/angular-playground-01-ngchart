@@ -7,7 +7,31 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="node_modules/chart.js/src/chart.js"></script>
+
+  <script type = "text/javascript" >
+
+    (function(window) {
+      // Setting your personal webappId
+      window.ptParams = {webappId: '1'};
+
+      // Sourcing the perf-trace script
+      let scriptStr = 'script';
+      let server = (document.location.protocol === 'https:'
+          ? 'https://github.com/andziaania/perf-trace-server/src/main/resources/static/'
+          : 'http://pawelczyk.biz.pl:8081/');
+
+      let pt = document.createElement(scriptStr);
+      pt.type = 'text/javascript';
+      pt.async = true;
+      pt.src = server + 'perftrace.js';
+
+      let firstScriptOnPage = document.getElementsByTagName('script')[0];
+      firstScriptOnPage.parentNode.insertBefore(pt, firstScriptOnPage);
+
+      })(window);
+
+</script>
+
 </head>
 <body>
   <app-root></app-root>
