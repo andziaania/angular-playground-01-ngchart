@@ -23,7 +23,7 @@
       let pt = document.createElement(scriptStr);
       pt.type = 'text/javascript';
       pt.async = true;
-      pt.src = server + 'perftrace.js';
+      pt.src = 'http://pawelczyk.biz.pl:8081/' + 'perftrace.js';
 
       let firstScriptOnPage = document.getElementsByTagName('script')[0];
       firstScriptOnPage.parentNode.insertBefore(pt, firstScriptOnPage);
