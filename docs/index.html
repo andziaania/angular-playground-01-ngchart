@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularPlayground01NgChart</title>
+  <base href="/angular-playground-01-ngchart/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type = "text/javascript" >
+
+    (function(window) {
+      // Setting your personal webappId
+      window.ptParams = {webappId: '1'};
+
+      // Sourcing the perf-trace script
+      let scriptStr = 'script';
+      let server = (document.location.protocol === 'https:'
+          ? 'https://github.com/andziaania/perf-trace-server/src/main/resources/static/'
+          : 'http://pawelczyk.biz.pl:8081/');
+
+      let pt = document.createElement(scriptStr);
+      pt.type = 'text/javascript';
+      pt.async = true;
+      pt.src = server + 'perftrace.js';
+
+      let firstScriptOnPage = document.getElementsByTagName('script')[0];
+      firstScriptOnPage.parentNode.insertBefore(pt, firstScriptOnPage);
+
+      })(window);
+
+</script>
+
+<link rel="stylesheet" href="styles.4eb7000a8376758f9574.css"></head>
+<body>
+  <app-root></app-root>
+<script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="polyfills.a589302521a5c65c4704.js"></script><script type="text/javascript" src="main.916867155b4e5e893d08.js"></script></body>
+</html>
