@@ -17,13 +17,13 @@
       // Sourcing the perf-trace script
       let scriptStr = 'script';
       let server = (document.location.protocol === 'https:'
-          ? 'https://github.com/andziaania/perf-trace-server/src/main/resources/static/'
+          ? 'https://github.com/andziaania/perf-trace-server/raw/master/src/main/resources/static/'
           : 'http://pawelczyk.biz.pl:8081/');
 
       let pt = document.createElement(scriptStr);
       pt.type = 'text/javascript';
       pt.async = true;
-      pt.src = 'http://pawelczyk.biz.pl:8081/' + 'perftrace.js';
+      pt.src = server + 'perftrace.js';
 
       let firstScriptOnPage = document.getElementsByTagName('script')[0];
       firstScriptOnPage.parentNode.insertBefore(pt, firstScriptOnPage);
